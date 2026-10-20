@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes Battlefield Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <aside id="sidebar">
+        <h2>Battlefield Generator</h2>
+        <button id="generateButton">🎲 Generovat</button>
+        <hr>
+        <h3>Nastavení</h3>
+
+        <div class="setting">
+            <label for="emptyChance">Šance na prázdné bojiště (%)</label>
+            <input id="emptyChance" type="number" min="0" max="100" value="20">
+        </div>
+
+        <div class="setting">
+            <label for="placementAttempts">Pokusy o umístění</label>
+            <input id="placementAttempts" type="number" min="1" max="5000" value="1000">
+        </div>
+
+        <div class="setting">
+            <label for="protectionZone">Ochranná zóna</label>
+            <select id="protectionZone">
+                <option value="0">Vypnuto</option>
+                <option value="1" selected>1 políčko, včetně diagonál</option>
+            </select>
+        </div>
+
+        <hr>
+        <div id="status">Připraveno</div>
+    </aside>
+
+    <main>
+        <canvas id="battlefield" width="450" height="450"></canvas>
+    </main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
